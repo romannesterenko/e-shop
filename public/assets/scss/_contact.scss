@@ -1,0 +1,81 @@
+/*----------------------------------------*/
+/*  15. Contact
+/*----------------------------------------*/
+.contact{
+    &-map{
+        display: flex;
+        &-size{
+            min-height: 500px;
+            width: 100%;
+        }
+    }
+    &-form{
+        border-left: 1px solid $border-color;
+        padding: 40px;
+        width: calc(100% - 520px);
+        @include media-breakpoint-down(lg){
+            width: 100%;
+        }
+        .group-input{
+            display: flex;
+            @include media-breakpoint-down(xl){
+                flex-direction: column;
+            }
+        }
+        .form-field{
+            width: 100%;
+        }
+        .input-field,
+        .textarea-field{
+            border: 1px solid $border-color;
+            background-color: #f9f9f9;
+            color: #999999;
+            padding: 20px;
+            height: 40px;
+            width: 100%;
+            font-size: 14px;
+            font-style: italic;
+        }
+        .textarea-field{
+            height: 145px;
+        }
+        &-wrap{
+            background-color: #f9f9f9;
+            display: flex;
+            @include media-breakpoint-down(md){
+                flex-direction: column;
+            }
+        }
+        &-title{
+            position: relative;
+            line-height: 24px;
+            &:before{
+                background-color: $primary;
+                content: "";
+                width: 9px;
+                height: 17px;
+                position: absolute;
+                top: 0;
+                left: -40px;
+            }
+        }
+        .form-messege{
+            font-size: 14px;
+            &.success{
+                color: $secondary;
+            }
+            &.error{
+                color: red;
+            }
+        }
+    }
+    &-img{
+        padding-left: 30px;
+        width: 520px;
+        align-self: center;
+        @include media-breakpoint-down(lg){
+            padding-left: 0;
+            width: 100%;
+        }
+    }
+}

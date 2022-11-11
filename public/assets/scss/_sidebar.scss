@@ -1,0 +1,291 @@
+/*----------------------------------------*/
+/*  14. Sidebar
+/*----------------------------------------*/
+.widgets{
+    &-area{
+        background-color: #f9f9f9;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    &-searchbox{
+        position: relative;
+        padding-left: 20px;
+        padding-right: 20px;
+        .input-field{
+            border: 1px solid $border-color;
+            background-color: #f9f9f9;
+            border-radius: 30px;
+            width: 100%;
+            height: 60px;
+            padding-left: 15px;
+            padding-right: 75px;
+        }
+        &-btn{
+            background-color: transparent;
+            border: 0;
+            border-left: 1px solid $border-color;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            font-size: 18px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    &-title{
+        color: #535353;
+        font-size: 18px;
+        position: relative;
+        &:before{
+            background-color: $primary;
+            height: 14px;
+            width: 9px;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -40px;
+        }
+    }
+    &-author{
+        .widgets{
+            &-content{
+                text-align: center;
+                span{
+                    display: block;
+                    &.author{
+                        &-name{
+                            color: #2e2a31;
+                            font-size: 18px;
+                        }
+                        &-occupation{
+                            color: #5f5f5f;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-list-slider{
+        .swiper{
+            &-slide{
+                &:not(:last-child){
+                    border-bottom: 1px solid #e8e8e8;
+                    padding-bottom: 15px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .blog{
+            &-list{
+                &-item{
+                    display: flex;
+                    overflow: hidden;
+                    @include media-breakpoint-only(lg){
+                        flex-direction: column;
+                    }
+                    @media (max-width: 479px) {
+                        flex-direction: column;
+                    }
+                }
+                &-img{
+                    width: 98px;
+                }
+                &-content{
+                    width: calc(100% - 78px);
+                    padding-left: 20px;
+                    @include media-breakpoint-only(lg){
+                        padding-top: 15px;
+                        padding-left: 0;
+                        width: 100%;
+                    }
+                    @media (max-width: 479px) {
+                        padding-top: 15px;
+                        padding-left: 0;
+                        width: 100%;
+                    }
+                    .blog{
+                        &-meta{
+                            ul{
+                                li{
+                                    display: inline-block;
+                                    font-size: 13px;
+                                    color: #767676;
+                                }
+                            }
+                        }
+                    }
+                    .title{
+                        font-weight: 400;
+                        line-height: 25px;
+                        a{
+                            color: #383838;
+                            font-size: 18px;
+                            display: block;
+                            &:hover{
+                                color: $primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-item{
+        .with-border{
+            li{
+                &:not(:last-child){
+                    a{
+                        border-bottom: 1px solid #e8e8e8;
+                        padding-bottom: 15px;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+    &-newsletter{
+        .input-field{
+            text-align: center;
+            border: 1px solid #e8e8e8;
+            background-color: #f9f9f9;
+            font-style: italic;
+            font-size: 14px;
+            &:placeholder-shown{
+                color: #c0c0c0;
+            }
+        }
+        .btn{
+            text-align: center;
+        }
+    }
+    &-category{
+        li{
+            &:not(:last-child){
+                padding-bottom: 10px;
+            }
+            a{
+                color: #737070;
+                display: block;
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+    }
+    &-checkbox{
+        li{
+            &:not(:last-child){
+                margin-bottom: 25px;
+            }
+            /* ---Custom Input Checkbox--- */
+            input[type="checkbox"] {
+                display: none;
+            }
+            input[type="checkbox"] + label {
+                position: relative;
+                padding-left: 30px;
+                line-height: 1;
+                font-size: 14px;
+                font-weight: 400;
+                margin: 0;
+                color: #737070;
+                &:before {
+                    border: 2px solid #737070;
+                    border-radius: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 15px;
+                    height: 15px;
+                    display: block;
+                    content: "";
+                    transition: $baseTransition;
+                }
+                &:after {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    display: block;
+                    content: "\f00c";
+                    font-family: 'FontAwesome';
+                    font-size: 9px;
+                    line-height: 14px;
+                    opacity: 0;
+                    width: 15px;
+                    text-align: center;
+                    transition: $baseTransition;
+                    color: $white;
+                }
+            }
+            .label-checkbox{
+                display: flex;
+                span{
+                    color: #737070;
+                    width: 30px;
+                    height: 20px;
+                    border-radius: 8px;
+                    text-align: center;
+                    margin-left: 5px;
+                }
+            }
+            input[type="checkbox"]:checked + label {
+                color: $primary;
+                &:before {
+                    background-color: $primary;
+                    border-color: $primary;
+                }
+                &:after {
+                    opacity: 1;
+                }
+            }
+            /* -End Here- */
+        }
+    }
+    &-tags{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+            &:not(:last-child){
+                a{
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                }
+            }
+            a{
+                border: 1px solid #e8e8e8;
+                color: #7e7e7e;
+                padding: 5px 15px;
+                display: block;
+                border-radius: 30px;
+                &:hover{
+                    background-color: $primary;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+.sidebar{
+    &-area{
+        &.style{
+            &-2{
+                .widgets{
+                    &-area{
+                        padding-top: 30px;
+                        padding-bottom: 30px;
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
+                    &-title{
+                        &:before{
+                            left: -30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

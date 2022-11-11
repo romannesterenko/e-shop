@@ -1,0 +1,66 @@
+/*-----------------------------------------------------------------------------------
+    Template Name: Tromic - Car Accessories Shop Bootstrap 5 Template
+    Version: 1.0
+-----------------------------------------------------------------------------------
+    
+    CSS INDEX
+    ===================
+	
+    01. Template default CSS
+    02. Header
+    03. Slider
+    04. Shipping
+    05. Product
+    06. Banner
+    07. Newsletter
+    08. Blog
+    09. Testimonial
+    10. Brand
+    11. Breadcrumb
+    12. About
+    13. Shop
+    14. Sidebar
+    15. Contact
+    16. My Account
+    17. Login & Register
+    18. Cart
+    19. Wishlist
+    20. Compare
+    21. Checkout
+    22. FAQ
+    23. 404
+    24. Modal
+
+-----------------------------------------------------------------------------------*/
+@import "./bootstrap/functions";
+@import "variabls";
+@import "./bootstrap/bootstrap";
+
+@import "common";
+@import "header";
+@import "slider";
+@import "navigation";
+@import "offcanvas";
+@import "animation";
+@import "newsletter";
+@import "footer";
+@import "shipping";
+@import "product";
+@import "banner";
+@import "blog";
+@import "testimonial";
+@import "brand";
+@import "breadcrumb";
+@import "about";
+@import "shop";
+@import "sidebar";
+@import "contact";
+@import "my-account";
+@import "login-register";
+@import "cart";
+@import "wishlist";
+@import "compare";
+@import "checkout";
+@import "faq";
+@import "404";
+@import "modal";

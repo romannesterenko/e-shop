@@ -1,0 +1,66 @@
+/*----------------------------------------*/
+/*  16. Footer
+/*----------------------------------------*/
+.widget{
+    &-title{
+        color: $white;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        padding-bottom: 5px;
+    }
+    &-item{
+        li,
+        a,
+        p{
+            font-weight: 300;
+            line-height: 28px;
+        }
+    }
+    &-contact-info{
+        ul{
+            li{
+                font-weight: 300;
+                line-height: 28px;
+                &:not(:last-child){
+                    padding-bottom: 5px;
+                }
+                i{
+                    vertical-align: middle;
+                    margin-right: 5px;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    &-list{
+        &-item{
+            > li{
+                &:not(:last-child){
+                    padding-bottom: 10px;
+                }
+                i{
+                    margin-right: 20px;
+                    color: #df414b;
+                }
+            }
+        }
+    }
+}
+
+/* ---Copyright--- */
+.copyright{
+    text-align: center;
+    &-text{
+        text-transform: capitalize;
+        font-weight: 300;
+        font-size: 14px;
+        color: #8690a1;
+        a{
+            color: #8690a1;
+            &:hover{
+                color: $primary;
+            }
+        }
+    }
+}

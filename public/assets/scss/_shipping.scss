@@ -1,0 +1,77 @@
+/*----------------------------------------*/
+/*  04. Shipping
+/*----------------------------------------*/
+.shipping-bg {
+    height: 200px;
+    padding-left: 120px;
+    padding-right: 95px;
+    @include media-breakpoint-down(xl){
+        height: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+.shipping{
+    &-wrap{
+        @include media-breakpoint-up(xl){
+            align-items: center;
+            height: 100%;
+        }
+    }
+    &-item{
+        display: flex;
+        align-items: center;
+        @include media-breakpoint-down(md){
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    &-img{
+        width: 60px;
+    }
+    &-content{
+        width: calc(100% - 60px);
+        padding-left: 20px;
+        @include media-breakpoint-down(md){
+            padding-top: 20px;
+            padding-left: 0;
+        }
+        .title{
+            color: #1f2226;
+            font-size: 20px;
+        }
+        .short-desc{
+            color: #3e3e3f;
+        }
+    }
+    &-style{
+        &-2{
+            .shipping{
+                &-item{
+                    background-image: url('../images/shipping/shape/1.png');
+                    background-position: top;
+                    background-repeat: no-repeat;
+                    background-size: auto;
+                    flex-direction: column;
+                    align-content: center;
+                    justify-content: center;
+                    height: 240px;
+                    position: relative;
+                }
+                &-img{
+                    position: absolute;
+                    top: 30px;
+                    width: 70px;
+                }
+                &-content{
+                    background-color: $white;
+                    text-align: center;
+                    padding-top: 55px;
+                    padding-bottom: 20px;
+                    padding-left: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

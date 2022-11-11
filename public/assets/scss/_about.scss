@@ -1,0 +1,96 @@
+/*----------------------------------------*/
+/*  12. About
+/*----------------------------------------*/
+.about{
+    &-title{
+        text-transform: capitalize;
+        color: #4b4b4b;
+        font-size: 48px;
+    }
+    &-sub-title{
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        display: block;
+        font-size: 18px;
+    }
+    &-banner{
+        &-content{
+            .short-desc{
+                color: #6c788c;
+                line-height: 30px;
+            }
+        }
+        &-height{
+            height: 500px;
+        }
+        .popup-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+    }
+}
+
+/* ---Team Member--- */
+.team-member{
+    &-item{
+        position: relative;
+        text-align: center;
+        &:hover{
+            .team-member{
+                &-content{
+                    opacity: 1;
+                    visibility: visible;
+                    bottom: 40px;
+                }
+            }
+        }
+    }
+    &-content{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        z-index: 2;
+        opacity: 0;
+        visibility: hidden;
+        transition: $baseTransition;
+        .title{
+            color: $white;
+            font-size: 24px;
+            line-height: 26px;
+        }
+        .occupation{
+            color: $white;
+            line-height: 26px;
+            display: block;
+            padding-bottom: 10px;
+        }
+        .social-link{
+            &.with-border{
+                justify-content: center;
+                ul{
+                    li{
+                        a{
+                            background-color: #ff9b95;
+                            border: 0;
+                            color: $white;
+                            border-radius: 7px;
+                            i{
+                                transition: $baseTransition;
+                            }
+                            &:hover{
+                                background-color: $white;
+                                i{
+                                    color: $primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+/*----------------------------------------*/
+/*  06. Banner
+/*----------------------------------------*/
+.banner{
+    &-img{
+        position: relative;
+        .inner-content{
+            position: absolute;
+            top: 50%;
+            left: 50px;
+            transform: translateY(-50%);
+            &.text-right{
+                left: auto;
+                right: 50px;
+            }
+            .title{
+                text-transform: uppercase;
+                font-size: 30px;
+                @include media-breakpoint-down(xl){
+                    font-size: 20px;
+                }
+            }
+            .offer{
+                font-size: 18px;
+                line-height: 33px;
+                font-weight: 400;
+            }
+        }
+    }
+    &-content{
+        .title{
+            text-transform: uppercase;
+            font-size: 48px;
+            &.text-charcoal{
+                color: #444444;
+                font-weight: 700;
+            }
+            @include media-breakpoint-down(lg){
+                font-size: 30px;
+            }
+        }
+        .sub-title{
+            text-transform: uppercase;
+            font-size: 30px;
+            @include media-breakpoint-down(lg){
+                font-size: 25px;
+            }
+        }
+    }
+    &-style{
+        &-2{
+            &[data-bg-image]:not(.bg-pattern){
+                background-size: contain;
+                background-position: bottom;
+            }
+            .banner{
+                &-content{
+                    .sub-title{
+                        color: #7f7f7f;
+                        font-size: 24px;
+                        display: block;
+                        text-transform: capitalize;
+                    }
+                    .title{
+                        color: #4e4e4e;
+                    }
+                }
+            }
+        }
+        &-3{
+            .banner{
+                &-item{
+                    .inner-content{
+                        @media (max-width: 479px) {
+                            left: 30px;
+                            &.text{
+                                &-right{
+                                    left: auto;
+                                    right: 30px;
+                                }
+                            }
+                        }
+                        .offer{
+                            @media (max-width: 479px) {
+                                font-size: 14px;
+                                margin-bottom: 0;
+                                line-height: 26px;
+                            }
+                        }
+                        .title{
+                            margin-bottom: 30px;
+                            @media (max-width: 479px) {
+                                margin-bottom: 5px;
+                                font-size: 16px;
+                            }
+                        }
+                        .btn{
+                            @media (max-width: 479px) {
+                                font-size: 11px;
+                                width: 80px;
+                                height: 30px;
+                                line-height: 28px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

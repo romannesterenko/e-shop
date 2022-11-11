@@ -1,0 +1,39 @@
+/*----------------------------------------*/
+/*  24. Modal
+/*----------------------------------------*/
+.quick-view-modal{
+    .modal{
+        &-dialog{
+            max-width: 100%;
+            width: 1125px;
+            @include media-breakpoint-down(xxl){
+                width: calc(100% - 60px);
+                margin: auto;
+            }
+        }
+        &-content{
+            border: 0;
+        }
+    }
+}
+
+.modal{
+    .thumbs-arrow-holder{
+        transition: $baseTransition;
+    }
+    &-slider {
+        border: 1px solid $border-color;
+        margin-bottom: 10px;
+    }
+    &-thumbs{
+        .swiper{
+            &-slide{
+                border: 1px solid $border-color;
+                transition: $baseTransition;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

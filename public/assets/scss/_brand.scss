@@ -1,0 +1,23 @@
+/*----------------------------------------*/
+/*  10. Brand
+/*----------------------------------------*/
+.brand{
+    &-slider{
+        .swiper{
+            &-wrapper{
+                align-items: center;
+            }
+        }
+    }
+    &-item{
+        display: flex;
+        justify-content: center;
+    }
+    &-nav{
+        background-color: #f4f4f4;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
