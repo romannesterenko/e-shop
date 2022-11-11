@@ -27,7 +27,8 @@ Route::group(['prefix' => '/catalog','as' => 'catalog.'], function (){
     Route::get('/p/{product_slug}', [App\Http\Controllers\HomeController::class, 'product'])->name('product');
 });
 Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart.index');
-Route::get('/checkout', [App\Http\Controllers\CartController::class, 'checkout'])->name('cart.checkout');
+Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'index'])->name('checkout.index');
+Route::post('/checkout', [App\Http\Controllers\CheckoutController::class, 'store'])->name('order.store');
 Route::get('pages/check_slug', [App\Http\Controllers\PagesController::class, 'check_slug'])
     ->name('pages.check_slug');
 Route::group(['middleware' => ['auth', 'isAdmin'],'prefix' => '/dashboard','as' => 'admin.'], function (){

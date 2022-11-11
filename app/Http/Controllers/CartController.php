@@ -16,7 +16,7 @@ class CartController extends Controller
     {
         $cartItems = Cart::get();
         $total = Cart::totalSum();
-        return view('cart.checkout', compact('cartItems', 'total'));
+        return view('checkout.index', compact('cartItems', 'total'));
     }
     public function addToCart($product_id, $quantity)
     {

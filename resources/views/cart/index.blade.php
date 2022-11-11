@@ -74,7 +74,7 @@
                                         <ul class="cart_total">
                                             <li>Łącznie <span>{{$total}} zl</span></li>
                                         </ul>
-                                        <a href="{{route('cart.checkout')}}">Przejdź do kasy</a>
+                                        <a href="{{route('checkout.index')}}">Przejdź do kasy</a>
                                     </div>
                                 </div>
                             </div>

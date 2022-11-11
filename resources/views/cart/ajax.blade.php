@@ -26,7 +26,7 @@
 </div>
 <div class="group-btn_wrap d-grid gap-2">
     <a href="{{route('cart.index')}}" class="btn btn-dark btn-primary-hover">Zobacz Koszyk</a>
-    <a href="{{route('cart.checkout')}}" class="btn btn-dark btn-primary-hover">Przejdź do kasy</a>
+    <a href="{{route('checkout.index')}}" class="btn btn-dark btn-primary-hover">Przejdź do kasy</a>
 </div>
 
 

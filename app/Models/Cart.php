@@ -19,6 +19,9 @@ class Cart extends Model
     private static function getBySessId(){
         return self::where(['session_id' => session()->getId()]);
     }
+    public static function getByUserId($user_id){
+        return self::where(['user_id' => $user_id])->get();
+    }
     public static function get(){
         return self::getBySessId()->get();
     }
