@@ -39,7 +39,7 @@
 </head>
 
 <body>
-<div class="preloader-activate preloader-active open_tm_preloader">
+<!--<div class="preloader-activate preloader-active open_tm_preloader">
     <div class="preloader-area-wrap">
         <div class="spinner d-flex justify-content-center align-items-center h-100">
             <div class="bounce1"></div>
@@ -47,7 +47,7 @@
             <div class="bounce3"></div>
         </div>
     </div>
-</div>
+</div>-->
 <div class="main-wrapper">
     <input type="hidden" id="session_id" name="session_id" value="{{session()->getId()}}"></input>
     <!-- Begin Main Header Area -->

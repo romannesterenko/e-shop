@@ -10,7 +10,9 @@
         <div class="price-box">
             <div class="price-box-holder">
                 <span>Cena: </span>
-                <span class="old-price">{{$product->original_price}} zł</span>
+                @if($product->original_price>$product->selling_price)
+                    <span class="old-price">{{$product->original_price}} zł</span>
+                @endif
                 <span class="new-price text-primary">{{$product->selling_price}} zł</span>
             </div>
         </div>

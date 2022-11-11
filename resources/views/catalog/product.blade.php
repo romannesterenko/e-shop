@@ -65,8 +65,8 @@
                         <div class="single-product-content">
                             <h1 class="title mb-3">{{$product->name}}</h1>
                             <div class="price-box pb-3">
-                                <span class="old-price">{{$product->original_price}} zl</span>
-                                <span class="new-price text-danger">{{$product->selling_price}} zl</span>
+                                <span class="old-price">{{$product->original_price}} zł</span>
+                                <span class="new-price text-danger">{{$product->selling_price}} zł</span>
                             </div>
                             <div class="rating-box-wrap pb-55">
                                 <div class="rating-box">

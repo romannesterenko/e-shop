@@ -49,7 +49,7 @@
                                                 </a>
                                             </td>
                                             <td class="product-name"><a href="{{route('catalog.product', [$item->product->slug])}}">{{$item->product->name}}</a></td>
-                                            <td class="product-price"><span class="amount">{{$item->price}} zl</span></td>
+                                            <td class="product-price"><span class="amount">{{$item->price}} zł</span></td>
                                             <td class="quantity">
                                                 <div class="cart-plus-minus" data-id="{{$item->id}}">
                                                     <input class="cart-plus-minus-box" data-id="{{$item->id}}" value="{{$item->quantity}}" type="text">
@@ -61,7 +61,7 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td class="product-subtotal"><span class="amount" data-id="{{$item->id}}">{{$item->price*$item->quantity}} zl</span></td>
+                                            <td class="product-subtotal"><span class="amount" data-id="{{$item->id}}">{{$item->price*$item->quantity}} zł</span></td>
                                         </tr>
                                     @endforeach
                                     </tbody>
@@ -72,7 +72,7 @@
                                     <div class="cart-page-total">
                                         <h2>Łącznie</h2>
                                         <ul class="cart_total">
-                                            <li>Łącznie <span>{{$total}} zl</span></li>
+                                            <li>Łącznie <span>{{$total}} zł</span></li>
                                         </ul>
                                         <a href="{{route('checkout.index')}}">Przejdź do kasy</a>
                                     </div>

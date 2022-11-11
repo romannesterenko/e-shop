@@ -14,7 +14,7 @@
                 </a>
                 <div class="product-item_content">
                     <a class="product-item_title" href="{{route('catalog.product', [$item->product->slug])}}">{{$item->product->name}}</a>
-                    <span class="product-item_quantity">{{$item->quantity}} x {{$item->price}} zl</span>
+                    <span class="product-item_quantity">{{$item->quantity}} x {{$item->price}} zł</span>
                 </div>
             </li>
         @endforeach
@@ -22,7 +22,7 @@
 </div>
 <div class="minicart-item_total">
     <span>Kwota zakupów</span>
-    <span class="ammount">{{$total}} zl</span>
+    <span class="ammount">{{$total}} zł</span>
 </div>
 <div class="group-btn_wrap d-grid gap-2">
     <a href="{{route('cart.index')}}" class="btn btn-dark btn-primary-hover">Zobacz Koszyk</a>
