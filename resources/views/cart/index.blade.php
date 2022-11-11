@@ -32,7 +32,7 @@
                                             <th class="cart-product-name">Produkt</th>
                                             <th class="product-price">Cena jednostkowa</th>
                                             <th class="product-quantity">Ilość</th>
-                                            <th class="product-subtotal">Całkowity</th>
+                                            <th class="product-subtotal">Razem</th>
                                         </tr>
                                     </thead>
                                     <tbody>
