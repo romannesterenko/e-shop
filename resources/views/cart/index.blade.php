@@ -30,7 +30,7 @@
                                             <th class="product_remove">Usunąć</th>
                                             <th class="product-thumbnail">Obraz</th>
                                             <th class="cart-product-name">Produkt</th>
-                                            <th class="product-price">Cena jednostkowa</th>
+                                            <th class="product-price">Cena Jednostkowa</th>
                                             <th class="product-quantity">Ilość</th>
                                             <th class="product-subtotal">Całkowity</th>
                                         </tr>
