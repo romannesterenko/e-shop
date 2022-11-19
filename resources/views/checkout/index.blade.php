@@ -152,11 +152,12 @@
                                         <tfoot>
                                         <tr class="cart-subtotal">
                                             <th>Całkowita wartość koszyka</th>
-                                            <td style="text-align: center"><span class="amount" style="text-align: center;">{{$total}} zł</span></td>
+                                            <td style="text-align: center"><span class="amount" style="text-align: center;">{{ $total }} zł</span></td>
                                         </tr>
                                         <tr class="order-total">
                                             <th>Całkowita wartość zamówienia</th>
-                                            <td style="text-align: center"><strong><span class="amount">{{$total}} zł</span></strong></td>
+                                            <td style="text-align: center"><strong><span class="amount">{{ $total }} zł</span></strong></td>
+                                            <input type="hidden" name="price" value="{{ $total }}">
                                         </tr>
                                         </tfoot>
                                     </table>

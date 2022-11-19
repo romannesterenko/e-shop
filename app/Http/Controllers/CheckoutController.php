@@ -16,7 +16,7 @@ class CheckoutController extends Controller
 
     public function store(Request $request)
     {
-        dd($request);
+        //dd($request);
         Order::placeOrder($request);
         return redirect(route('home'))->with('status', 'Заказ успешно создан');
     }
