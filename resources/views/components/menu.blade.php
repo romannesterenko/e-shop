@@ -1,7 +1,7 @@
 <nav class="main-nav">
     <ul>
         <li>
-            <a href="{{route('home')}}">Strona główna123</a>
+            <a href="{{route('home')}}">Strona główna</a>
         </li>
         <li class="drop-holder">
             <a href="#">Kategorie produktów
