@@ -22,4 +22,9 @@ class Category extends Model
         'meta_descrip',
         'meta_keywords',
     ];
+
+    public function author():User
+    {
+        return User::find($this->created_by);
+    }
 }

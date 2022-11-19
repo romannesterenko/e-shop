@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 
@@ -78,6 +79,7 @@ class CategoryController extends Controller
         $category->meta_title = $request->meta_title;
         $category->meta_descrip = $request->meta_descrip;
         $category->meta_keywords = $request->meta_keywords;
+        $category->created_by = Auth::user()->id;
         $category->save();
         return redirect(route('admin.categories.index'))->with('status', 'Категория была успешно добавлена');
     }

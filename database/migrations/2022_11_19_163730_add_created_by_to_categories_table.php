@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('orders', function (Blueprint $table) {
-            $table->string('status')->default('new');
+        Schema::table('categories', function (Blueprint $table) {
+            $table->unsignedBigInteger('created_by')->default(1);
         });
     }
 
@@ -25,8 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('orders', function (Blueprint $table) {
-            $table->dropColumn('status');
+        Schema::table('categories', function (Blueprint $table) {
+            $table->dropColumn('created_by');
         });
     }
 };

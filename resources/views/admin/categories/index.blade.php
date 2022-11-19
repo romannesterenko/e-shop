@@ -28,6 +28,7 @@
                                 <th>Slug</th>
                                 <th>Активность</th>
                                 <th>Популярная</th>
+                                <th>Создал</th>
                                 <th>Изображение</th>
                                 <th class="d-flex justify-content-end">Действия</th>
                             </tr>
@@ -40,6 +41,7 @@
                                     <td>{{$category->slug}}</td>
                                     <td>{{$category->status==1?'Да':'Нет'}}</td>
                                     <td>{{$category->popular==1?'Да':'Нет'}}</td>
+                                    <td>{{$category->author()->name}} {{$category->author()->last_name}}</td>
                                     <td><img class="list-categories-image" src="{{asset('assets/uploads/category/'.$category->image)}}" alt=""></td>
                                     <td class="d-flex justify-content-end">
                                         <a href="{{route('admin.categories.show', ['id' => $category->id])}}" role="button" type="button" class="btn btn-rounded btn-outline-success">
