@@ -14,7 +14,7 @@
             <div class="card-header">
                 <div class="d-flex justify-content-between">
                 <h5>Список статусов заказа</h5>
-                <a href="{{route('admin.statuses.create')}}" type="submit" class="btn btn-rounded btn-outline-success" value="Создать">Создать</a>
+                <a href="{{route('admin.statuses.create')}}" type="submit" class="btn btn-rounded btn-outline-success" value="Создать">Создать статус</a>
                 </div>
             </div>
             <div class="card-block table-border-style">

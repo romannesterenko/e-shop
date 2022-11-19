@@ -11,7 +11,13 @@
 @section('content')
     <div class="col-xl-12">
         <div class="card">
-            <div class="card-block table-border-style">
+            <div class="card-header">
+                <div class="d-flex justify-content-between">
+                    <h5>Список заказов</h5>
+                    <a href="{{route('admin.orders.create')}}" type="submit" class="btn btn-rounded btn-outline-success">Создать заказ</a>
+                </div>
+            </div>
+            <div class="card-block">
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>
