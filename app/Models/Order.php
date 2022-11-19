@@ -14,6 +14,7 @@ class Order extends Model
     protected $table = 'orders';
     protected $fillable = [
         'user',
+        'status',
         'first_name',
         'last_name',
         'zipcode',
@@ -25,6 +26,10 @@ class Order extends Model
         'email',
         'price'
     ];
+
+    public function statuses(){
+        return OrderStatus::findByCode($this->status);
+    }
 
     public static function placeOrder(Request $request){
         $order = new Order();
@@ -51,7 +56,7 @@ class Order extends Model
             $user->save();
         }
         $order->user = $user->id;
-        $order->first_name = $request->first_name;
+        $order->first_name = $request->name;
         $order->last_name = $request->last_name;
         $order->zipcode = $request->zipcode;
         $order->city = $request->city;

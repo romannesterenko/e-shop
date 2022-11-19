@@ -69,4 +69,12 @@ Route::group(['middleware' => ['auth', 'isAdmin'],'prefix' => '/dashboard','as' 
         Route::put('/update/{id}', [\App\Http\Controllers\Admin\OrderController::class, 'update'])->name('update');
         Route::delete('/delete/{id}', [\App\Http\Controllers\Admin\OrderController::class, 'delete'])->name('delete');
     });
+    Route::group(['prefix' => 'statuses', 'as' => 'statuses.'], function (){
+        Route::get('/', [\App\Http\Controllers\Admin\OrderStatusController::class, 'index'])->name('index');
+        Route::get('/create', [\App\Http\Controllers\Admin\OrderStatusController::class, 'create'])->name('create');
+        Route::get('/edit/{id}', [\App\Http\Controllers\Admin\OrderStatusController::class, 'edit'])->name('edit');
+        Route::post('/create', [\App\Http\Controllers\Admin\OrderStatusController::class, 'store'])->name('store');
+        Route::put('/update/{id}', [\App\Http\Controllers\Admin\OrderStatusController::class, 'update'])->name('update');
+        Route::delete('/delete/{id}', [\App\Http\Controllers\Admin\OrderStatusController::class, 'delete'])->name('delete');
+    });
 });

@@ -23,7 +23,7 @@
                     <a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Заказы</span></a>
                     <ul class="pcoded-submenu">
                         <li class=""><a href="{{ route('admin.orders.index') }}" class="{{ Route::currentRouteName()=='admin.orders.index'?'active-item':'' }}">Список заказов</a></li>
-                        <li class=""><a href="{{ route('admin.orders.create') }}" class="{{ Route::currentRouteName()=='admin.orders.create'?'active-item':'' }}">Создание заказов</a></li>
+                        <li class=""><a href="{{ route('admin.statuses.index') }}" class="{{ Route::currentRouteName()=='admin.statuses.index'?'active-item':'' }}">Статусы заказов</a></li>
                     </ul>
                 </li>
                 <li class="nav-item pcoded-hasmenu {{ str_contains(Route::currentRouteName(), 'admin.categories')?'active pcoded-trigger':'' }}">

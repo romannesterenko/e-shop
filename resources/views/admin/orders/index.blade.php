@@ -31,7 +31,7 @@
                                     <td scope="row">{{ $order->created_at }}</td>
                                     <td scope="row">{{ $order->first_name }} {{ $order->last_name }}</td>
                                     <td scope="row">{{ $order->price }}</td>
-                                    <td scope="row">Новый</td>
+                                    <td scope="row"><div class="border border-secondary rounded-pill text-center py-1 font-weight-bold" style="background-color: {{ $order->statuses()->color }}">{{ $order->statuses()->name }}</div></td>
                                     <td class="d-flex justify-content-end">
                                         <a href="{{route('admin.orders.show', ['id' => $order->id])}}" role="button" type="button" class="btn btn-rounded btn-outline-success">
                                             <i class="feather icon-eye"></i>
@@ -39,13 +39,6 @@
                                         <a href="{{route('admin.orders.edit', ['id' => $order->id])}}" role="button"  type="button" class="btn btn-rounded btn-outline-primary">
                                             <i class="feather icon-edit-1"></i>
                                         </a>
-                                        <form action="{{route('admin.orders.delete', $order->id)}}" method="post">
-                                            @csrf
-                                            @method('delete')
-                                            <button type="submit" class="btn btn-rounded btn-outline-danger" value="Удалить">
-                                                <i class="feather icon-trash-2"></i>
-                                            </button>
-                                        </form>
                                     </td>
                                 </tr>
                             @endforeach
