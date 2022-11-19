@@ -31,30 +31,20 @@
                                 <h3>Powracający klient? <span id="showlogin">Kliknij tutaj aby się zalogować</span></h3>
                                 <div id="checkout-login" class="coupon-content" style="display: none;">
                                     <div class="coupon-info">
-                                        <p class="coupon-text mb-1">Quisque gravida turpis sit amet nulla posuere lacinia. Cras sed est
-                                            sit amet ipsum luctus.</p>
-                                            <p class="form-row-first">
-                                                <label class="mb-1">Username or email <span class="required">*</span></label>
-                                                <input type="text">
-                                            </p>
-                                            <p class="form-row-last">
-                                                <label>Password <span class="required">*</span></label>
-                                                <input type="text">
-                                            </p>
-                                            <p class="form-row">
-                                                <input type="checkbox" id="remember_me">
-                                                <label for="remember_me">Remember me</label>
-                                            </p>
-                                            <p class="lost-password"><a href="#">Lost your password?</a></p>
-                                    </div>
-                                </div>
-                                <h3>Have a coupon? <span id="showcoupon">Click here to enter your code</span></h3>
-                                <div id="checkout_coupon" class="coupon-checkout-content">
-                                    <div class="coupon-info">
-                                            <p class="checkout-coupon">
-                                                <input placeholder="Coupon code" type="text">
-                                                <input class="coupon-inner_btn" value="Apply Coupon" type="submit">
-                                            </p>
+                                        <p class="coupon-text mb-1"></p>
+                                        <p class="form-row-first">
+                                            <label class="mb-1">Username or email <span class="required">*</span></label>
+                                            <input type="text">
+                                        </p>
+                                        <p class="form-row-last">
+                                            <label>Password <span class="required">*</span></label>
+                                            <input type="text">
+                                        </p>
+                                        <p class="form-row">
+                                            <input type="checkbox" id="remember_me">
+                                            <label for="remember_me">Remember me</label>
+                                        </p>
+                                        <p class="lost-password"><a href="#">Lost your password?</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -121,7 +111,7 @@
                                         <div class="col-md-6">
                                             <div class="checkout-form-list">
                                                 <label>Email <span class="required">*</span></label>
-                                                <input type="email" name="email" value="{{Auth::user()->email}}">
+                                                <input type="email" name="email" value="">
                                             </div>
                                         </div>
                                         <div class="col-md-12">

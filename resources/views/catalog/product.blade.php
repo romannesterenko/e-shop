@@ -65,7 +65,9 @@
                         <div class="single-product-content">
                             <h1 class="title mb-3">{{$product->name}}</h1>
                             <div class="price-box pb-3">
-                                <span class="old-price">{{$product->original_price}} zł</span>
+                                @if($product->original_price>$product->selling_price)
+                                    <span class="old-price" style="margin-right: 10px;">{{$product->original_price}} zł</span>
+                                @endif
                                 <span class="new-price text-danger">{{$product->selling_price}} zł</span>
                             </div>
                             <div class="rating-box-wrap pb-55">
@@ -79,7 +81,7 @@
                                     </ul>
                                 </div>
                                 <div class="review-status ps-4">
-                                    <a href="#">( 5 Opinii Klientów )</a>
+                                    <a href="#reviews" onclick="$('#reviews-tab').parent('li').trigger('click')">( 5 Opinii Klientów )</a>
                                 </div>
                             </div>
                             <p class="short-desc mb-9">{{$product->small_description}}</p>
