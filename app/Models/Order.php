@@ -34,6 +34,8 @@ class Order extends Model
     public static function placeOrder(Request $request){
         $order = new Order();
         if($user = User::getByEmail($request->email)){
+            $user->name = $request->name;
+            $user->last_name = $request->last_name;
             $user->zipcode = $request->zipcode;
             $user->city = $request->city;
             $user->street = $request->street;

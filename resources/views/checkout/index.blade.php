@@ -67,7 +67,7 @@
                                         <div class="col-md-6">
                                             <div class="checkout-form-list">
                                                 <label>Nazwisko <span class="required">*</span></label>
-                                                <input placeholder="Nazwisko" placeholder="" name="last_name" value="{{ Auth::check()?Auth::user()->name:'' }}" type="text" required>
+                                                <input placeholder="Nazwisko" placeholder="" name="last_name" value="{{ Auth::check()?Auth::user()->last_name:'' }}" type="text" required>
                                             </div>
                                         </div>
                                     </div>

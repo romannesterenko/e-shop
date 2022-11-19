@@ -17,25 +17,6 @@
                     <form role="form" action="{{route('admin.orders.update', ['id' => $order->id])}}" enctype="multipart/form-data" method="post">
                         @csrf
                         @method('PUT')
-                        <div class="form-row">
-                            <div class="form-group col-md-4">
-                                <label for="category">Категория</label>
-                                <select class="form-control" name="category_id" id="category">
-                                    <option value="0">Нет категории</option>
-                                    @foreach($categories as $category)
-                                        <option value="{{$category->id}}" {{ $order->category->id==$category->id?'selected':''}}>{{$category->name}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="inputEmail4">Название заказа</label>
-                                <input type="text" name="name" value="{{$order->name}}" class="form-control" id="inputEmail4" placeholder="" required>
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label for="inputPassword4">Символьный код заказа</label>
-                                <input type="text" class="form-control" value="{{$order->slug}}" name="slug"  id="inputPassword4" placeholder="" required>
-                            </div>
-                        </div>
                         <div class="form-group">
                             <label class="form-label">Анонсное описание заказа</label>
                             <textarea name="small_description" class="form-control" rows="5">{{$order->small_description}}</textarea>

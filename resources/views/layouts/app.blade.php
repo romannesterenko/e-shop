@@ -71,10 +71,20 @@
                                         <button class="btn btn-link dropdown-toggle ht-btn p-0" type="button" id="settingButton" data-bs-toggle="dropdown" aria-label="setting" aria-expanded="false">
                                             <i class="pe-7s-user"></i>
                                         </button>
-                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingButton">
-                                            <li><a class="dropdown-item" href="my-account.html">My account</a></li>
-                                            <li><a class="dropdown-item" href="login-register.html">Login | Register</a></li>
-                                        </ul>
+                                        @if(Auth::check())
+                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingButton">
+                                                <li><a class="dropdown-item" href="/login">{{ Auth::user()->name }} {{ Auth::user()->last_name }}</a></li>
+                                                @if(Auth::user()->role_as==1)
+                                                    <li><a class="dropdown-item" href="{{route('admin.home')}}">Panel administracyjny</a></li>
+                                                @endif
+                                                <li><a class="dropdown-item" href="/logout">Wyloguj</a></li>
+                                            </ul>
+                                        @else
+                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingButton">
+                                                <li><a class="dropdown-item" href="/login">Zaloguj się</a></li>
+                                                <li><a class="dropdown-item" href="/register">Zarejestruj się</a></li>
+                                            </ul>
+                                        @endif
                                     </li>
                                     <li>
                                         <a href="#exampleModal" class="search-btn bt" data-bs-toggle="modal" data-bs-target="#exampleModal">

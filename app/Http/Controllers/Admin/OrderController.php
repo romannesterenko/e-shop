@@ -25,8 +25,7 @@ class OrderController extends Controller
     }
     public function edit($order_id){
         $order = Order::find($order_id);
-        $categories = Category::all();
-        return view('admin.orders.edit', compact('order', 'categories'));
+        return view('admin.orders.edit', compact('order'));
     }
     public function delete($order_id){
         $order = Order::find($order_id);
