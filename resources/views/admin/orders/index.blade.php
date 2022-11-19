@@ -23,6 +23,7 @@
                         <thead>
                             <tr>
                                 <th>#</th>
+                                <th>№ заказа</th>
                                 <th>Дата</th>
                                 <th>Покупатель</th>
                                 <th>Сума заказа</th>
@@ -33,13 +34,14 @@
                         <tbody>
                             @foreach($orders as $order)
                                 <tr>
-                                    <td scope="row"><a href="{{route('admin.orders.show', ['id' => $order->id])}}">{{$order->id}}</a></td>
+                                    <td scope="row">{{$order->id}}</td>
+                                    <td scope="row"><a href="{{route('admin.orders.show', ['number' => $order->order_number])}}"><b>{{ $order->order_number }}</b></a></td>
                                     <td scope="row">{{ $order->created_at }}</td>
-                                    <td scope="row">{{ $order->first_name }} {{ $order->last_name }}</td>
+                                    <td scope="row"><a href="#">{{ $order->first_name }} {{ $order->last_name }}</a></td>
                                     <td scope="row">{{ $order->price }}</td>
                                     <td scope="row"><div class="border border-secondary rounded-pill text-center py-1 font-weight-bold" style="background-color: {{ $order->statuses()->color }}">{{ $order->statuses()->name }}</div></td>
                                     <td class="d-flex justify-content-end">
-                                        <a href="{{route('admin.orders.show', ['id' => $order->id])}}" role="button" type="button" class="btn btn-rounded btn-outline-success">
+                                        <a href="{{route('admin.orders.show', ['number' => $order->order_number])}}" role="button" type="button" class="btn btn-rounded btn-outline-success">
                                             <i class="feather icon-eye"></i>
                                         </a>
                                         <a href="{{route('admin.orders.edit', ['id' => $order->id])}}" role="button"  type="button" class="btn btn-rounded btn-outline-primary">

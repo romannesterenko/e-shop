@@ -12,11 +12,11 @@ use function GuzzleHttp\Promise\all;
 class OrderController extends Controller
 {
     public function index(){
-        $orders = Order::all();
+        $orders = Order::orderByDesc('id')->get();
         return view('admin.orders.index', compact('orders'));
     }
-    public function show($order_id){
-        $order = Order::find($order_id);
+    public function show($order_number){
+        $order = Order::getByNumber($order_number);
         return view('admin.orders.show', compact('order'));
     }
     public function update(Request $request, $id){
