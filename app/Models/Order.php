@@ -38,7 +38,8 @@ class Order extends Model
             $user->save();
         }else{
             $user = new User();
-            $user->name = $request->first_name.' '.$request->last_name;
+            $user->name = $request->name;
+            $user->last_name = $request->last_name;
             $user->password = Hash::make('90Tazuna');
             $user->zipcode = $request->zipcode;
             $user->city = $request->city;

@@ -60,4 +60,13 @@ Route::group(['middleware' => ['auth', 'isAdmin'],'prefix' => '/dashboard','as' 
         Route::put('/update/{id}', [\App\Http\Controllers\Admin\SliderController::class, 'update'])->name('update');
         Route::delete('/delete/{id}', [\App\Http\Controllers\Admin\SliderController::class, 'delete'])->name('delete');
     });
+    Route::group(['prefix' => 'orders', 'as' => 'orders.'], function (){
+        Route::get('/', [\App\Http\Controllers\Admin\OrderController::class, 'index'])->name('index');
+        Route::get('/create', [\App\Http\Controllers\Admin\OrderController::class, 'create'])->name('create');
+        Route::get('/show/{id}', [\App\Http\Controllers\Admin\OrderController::class, 'show'])->name('show');
+        Route::get('/edit/{id}', [\App\Http\Controllers\Admin\OrderController::class, 'edit'])->name('edit');
+        Route::post('/create', [\App\Http\Controllers\Admin\OrderController::class, 'store'])->name('store');
+        Route::put('/update/{id}', [\App\Http\Controllers\Admin\OrderController::class, 'update'])->name('update');
+        Route::delete('/delete/{id}', [\App\Http\Controllers\Admin\OrderController::class, 'delete'])->name('delete');
+    });
 });

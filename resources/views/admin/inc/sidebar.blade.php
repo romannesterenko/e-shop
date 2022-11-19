@@ -19,6 +19,13 @@
                 <li class="nav-item {{ Route::currentRouteName()=='admin.home'?'active  pcoded-trigger':'' }}">
                     <a href="{{route('admin.home')}}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Панель управления</span></a>
                 </li>
+                <li class="nav-item pcoded-hasmenu {{ str_contains(Route::currentRouteName(), 'admin.orders')?'active pcoded-trigger':'' }}">
+                    <a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Заказы</span></a>
+                    <ul class="pcoded-submenu">
+                        <li class=""><a href="{{ route('admin.orders.index') }}" class="{{ Route::currentRouteName()=='admin.orders.index'?'active-item':'' }}">Список заказов</a></li>
+                        <li class=""><a href="{{ route('admin.orders.create') }}" class="{{ Route::currentRouteName()=='admin.orders.create'?'active-item':'' }}">Создание заказов</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item pcoded-hasmenu {{ str_contains(Route::currentRouteName(), 'admin.categories')?'active pcoded-trigger':'' }}">
                     <a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Категории</span></a>
                     <ul class="pcoded-submenu">
