@@ -4,13 +4,20 @@
         <h5 class="m-b-10">Список категорий</h5>
     </div>
     <ul class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{route('admin.home')}}"><i class="feather icon-home"></i></a></li>
+        <li class="breadcrumb-item"><a href="{{route('home')}}"><i class="feather icon-home"></i></a></li>
+        <li class="breadcrumb-item"><a href="{{route('admin.home')}}">Административная панель</a></li>
         <li class="breadcrumb-item"><a href="#!">Список категорий</a></li>
     </ul>
 @endsection
 @section('content')
     <div class="col-xl-12">
         <div class="card">
+            <div class="card-header">
+                <div class="d-flex justify-content-between">
+                    <h5>Список категорий продуктов</h5>
+                    <a href="{{route('admin.categories.create')}}" type="submit" class="btn btn-rounded btn-outline-success" value="Создать">Создать категорию</a>
+                </div>
+            </div>
             <div class="card-block table-border-style">
                 <div class="table-responsive">
                     <table class="table table-striped">
