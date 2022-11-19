@@ -24,11 +24,11 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Название категории</label>
-                                <input type="text" name="name" value="{{old('name')}}" class="form-control" id="inputEmail4" placeholder="" required>
+                                <input type="text" name="name" value="{{old('name')}}" class="form-control" id="name" placeholder="" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">Символьный код категории</label>
-                                <input type="text" class="form-control" value="{{old('slug')}}" name="slug"  id="inputPassword4" placeholder="" required>
+                                <input type="text" class="form-control" value="{{old('slug')}}" name="slug"  id="slug" placeholder="" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -78,6 +78,16 @@
 @endsection
 
 @section('additional_scripts')
+    <script>
+        $('#name').change(function(e) {
+            $.get('{{ route('pages.check_slug') }}',
+                { 'title': $(this).val() },
+                function( data ) {
+                    $('#slug').val(data.slug);
+                }
+            );
+        });
+    </script>
     <!-- Ckeditor js -->
     <script src="{{asset('assets/admin/plugins/ckeditor/js/ckeditor.js')}}"></script>
     <script>
