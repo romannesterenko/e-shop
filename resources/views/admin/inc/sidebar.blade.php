@@ -16,6 +16,10 @@
                     <label>Меню</label>
                 </li>
 
+                <li class="nav-item">
+                    <a href="{{route('home')}}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Перейти на сайт</span></a>
+                </li>
+
                 <li class="nav-item {{ Route::currentRouteName()=='admin.home'?'active  pcoded-trigger':'' }}">
                     <a href="{{route('admin.home')}}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Панель управления</span></a>
                 </li>
