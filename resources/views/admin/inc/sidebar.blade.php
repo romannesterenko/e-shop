@@ -6,7 +6,7 @@
                 <div class="b-bg">
                     <i class="feather icon-trending-up"></i>
                 </div>
-                <span class="b-title">E-shop</span>
+                <span class="b-title">RajDR</span>
             </a>
             <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
         </div>
@@ -26,7 +26,7 @@
                 <li class="nav-item pcoded-hasmenu {{ str_contains(Route::currentRouteName(), 'admin.orders')?'active pcoded-trigger':'' }}">
                     <a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Заказы</span></a>
                     <ul class="pcoded-submenu">
-                        <li class=""><a href="{{ route('admin.orders.index') }}" class="{{ Route::currentRouteName()=='admin.orders.index'?'active-item':'' }}">Список заказов</a></li>
+                        <li class=""><a href="{{ route('admin.orders.index') }}" class="{{ Route::currentRouteName()=='admin.orders.index'?'active-item':'' }}">Список заказов<span class="pcoded-badge label label-success">{{\App\Models\Order::where('status', 'new')->get()->count()}}</span></a></li>
                         <li class=""><a href="{{ route('admin.statuses.index') }}" class="{{ Route::currentRouteName()=='admin.statuses.index'?'active-item':'' }}">Статусы заказов</a></li>
                     </ul>
                 </li>

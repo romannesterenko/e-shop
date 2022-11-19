@@ -27,10 +27,25 @@ class Order extends Model
         'price'
     ];
 
+    private static function setNumber(Order $order)
+    {
+        $order->order_number = 'RDR'.date('Y').date('m').date('d').date('H').date('i').$order->id;
+        $order->save();
+    }
+
+    public static function getByNumber($order_number)
+    {
+        return Order::where('order_number', $order_number)->first();
+    }
+
     public function statuses(){
         return OrderStatus::findByCode($this->status);
     }
 
+    public function products()
+    {
+        return OrderProduct::where('order_id', $this->id)->get();
+    }
     public static function placeOrder(Request $request){
         $order = new Order();
         if($user = User::getByEmail($request->email)){
@@ -71,6 +86,7 @@ class Order extends Model
         $order->save();
         if($order->id>0){
             OrderProduct::setProductsToOrder($order->id);
+            Order::setNumber($order);
         }
 
     }
