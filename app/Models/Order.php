@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class Order extends Model
 {
@@ -27,7 +28,28 @@ class Order extends Model
 
     public static function placeOrder(Request $request){
         $order = new Order();
-        $order->user = Auth::user()->id;
+        if($user = User::getByEmail($request->email)){
+            $user->zipcode = $request->zipcode;
+            $user->city = $request->city;
+            $user->street = $request->street;
+            $user->house = $request->house;
+            $user->flat = $request->flat;
+            $user->phone = $request->phone;
+            $user->save();
+        }else{
+            $user = new User();
+            $user->name = $request->first_name.' '.$request->last_name;
+            $user->password = Hash::make('90Tazuna');
+            $user->zipcode = $request->zipcode;
+            $user->city = $request->city;
+            $user->street = $request->street;
+            $user->house = $request->house;
+            $user->flat = $request->flat;
+            $user->phone = $request->phone;
+            $user->email = $request->email;
+            $user->save();
+        }
+        $order->user = $user->id;
         $order->first_name = $request->first_name;
         $order->last_name = $request->last_name;
         $order->zipcode = $request->zipcode;
@@ -40,18 +62,7 @@ class Order extends Model
         $order->price = $request->price;
         $order->save();
         if($order->id>0){
-            $cart = Cart::getByUserId($order->user);
-            if($cart->count()==0)
-                $cart = Cart::get();
-            foreach ($cart as $cartItem){
-                $orderItem = new OrderProduct();
-                $orderItem->order_id = $order->id;
-                $orderItem->product_id = $cartItem->product_id;
-                $orderItem->quantity = $cartItem->quantity;
-                $orderItem->price = round($cartItem->quantity*$cartItem->price, 2);
-                $orderItem->save();
-                $cartItem->delete();
-            }
+            OrderProduct::setProductsToOrder($order->id);
         }
 
     }
