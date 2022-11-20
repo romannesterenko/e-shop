@@ -25,7 +25,6 @@
                             <tr>
                                 <th>#</th>
                                 <th>Название категории</th>
-                                <th>Slug</th>
                                 <th>Активность</th>
                                 <th>Популярная</th>
                                 <th>Создал</th>
@@ -38,7 +37,6 @@
                                 <tr>
                                     <th scope="row"><a href="{{route('admin.categories.show', ['id' => $category->id])}}">{{$category->id}}</a></th>
                                     <td><a href="{{route('admin.categories.show', ['id' => $category->id])}}">{{$category->name}}</a></td>
-                                    <td>{{$category->slug}}</td>
                                     <td>{{$category->status==1?'Да':'Нет'}}</td>
                                     <td>{{$category->popular==1?'Да':'Нет'}}</td>
                                     <td>{{$category->author()->name}} {{$category->author()->last_name}}</td>
