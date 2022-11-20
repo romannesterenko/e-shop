@@ -82,12 +82,12 @@
                 <div class="col-lg-6 pt-md-8 pt-lg-0">
                     <div class="banner-item img-hover-effect">
                         <div class="banner-img img-zoom-effect">
-                            <img class="img-full" src="assets/images/banner/2-1-620x257.jpg" alt="Banner Image">
-                            <div class="inner-content text-white">
-                                <h3 class="offer">From $96</h3>
-                                <h2 class="title">Latest <br> Car Wheel</h2>
+                            <img class="img-full" src="{{asset('assets/uploads/444.webp')}}" alt="Banner Image">
+                            <div class="inner-content text-night-rider">
+                                <h3 class="offer">Od 25 zl</h3>
+                                <h2 class="title">Przynęta na wody <br> wobler</h2>
                                 <div class="button-wrap">
-                                    <a class="btn btn-custom-size btn-primary" href="shop.html">Shop Now</a>
+                                    <a class="btn btn-custom-size btn-primary" href="shop.html">na zakupy</a>
                                 </div>
                             </div>
                         </div>
@@ -96,12 +96,12 @@
                 <div class="col-lg-6 pt-8 pt-lg-0">
                     <div class="banner-item img-hover-effect">
                         <div class="banner-img img-zoom-effect">
-                            <img class="img-full" src="assets/images/banner/2-2-620x257.jpg" alt="Banner Image">
-                            <div class="inner-content text-white">
-                                <h3 class="offer">From $96</h3>
-                                <h2 class="title">Latest <br> Car Wheel</h2>
+                            <img class="img-full" src="{{asset('assets/uploads/555.webp')}}" alt="Banner Image">
+                            <div class="inner-content text-night-rider">
+                                <h3 class="offer">Od 25 zl</h3>
+                                <h2 class="title">JiGGING <br> wobler</h2>
                                 <div class="button-wrap">
-                                    <a class="btn btn-custom-size btn-primary" href="shop.html">Shop Now</a>
+                                    <a class="btn btn-custom-size btn-primary" href="shop.html">na zakupy</a>
                                 </div>
                             </div>
                         </div>
@@ -110,12 +110,12 @@
                 <div class="col-lg-6 pt-8">
                     <div class="banner-item img-hover-effect">
                         <div class="banner-img img-zoom-effect">
-                            <img class="img-full" src="assets/images/banner/2-3-620x257.jpg" alt="Banner Image">
+                            <img class="img-full" src="{{asset('assets/uploads/666.webp')}}" alt="Banner Image">
                             <div class="inner-content text-right text-night-rider">
                                 <h3 class="offer">From $96</h3>
-                                <h2 class="title">Latest <br> Car Wheel</h2>
+                                <h2 class="title">Mini Popper <br> 45mm 3g</h2>
                                 <div class="button-wrap">
-                                    <a class="btn btn-custom-size btn-primary" href="shop.html">Shop Now</a>
+                                    <a class="btn btn-custom-size btn-primary" href="shop.html">na zakupy</a>
                                 </div>
                             </div>
                         </div>
@@ -124,12 +124,12 @@
                 <div class="col-lg-6 pt-8">
                     <div class="banner-item img-hover-effect">
                         <div class="banner-img img-zoom-effect">
-                            <img class="img-full" src="assets/images/banner/2-4-620x257.jpg" alt="Banner Image">
+                            <img class="img-full" src="{{asset('assets/uploads/777.webp')}}" alt="Banner Image">
                             <div class="inner-content text-right text-night-rider">
                                 <h3 class="offer">From $96</h3>
-                                <h2 class="title">Latest <br> Car Wheel</h2>
+                                <h2 class="title">Mysz <br> przynęta</h2>
                                 <div class="button-wrap">
-                                    <a class="btn btn-custom-size btn-primary" href="shop.html">Shop Now</a>
+                                    <a class="btn btn-custom-size btn-primary" href="shop.html">na zakupy</a>
                                 </div>
                             </div>
                         </div>
