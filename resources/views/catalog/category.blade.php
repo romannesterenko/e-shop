@@ -14,7 +14,9 @@
                                     <a href="{{route('home')}}"> Strona główna /</a>
                                 </li>
                                 @if($category->parent())
-                                    <a href="{{route('catalog.category', $category->parent()->slug)}}">{{$category->parent()->name}} /</a>
+                                    <li>
+                                        <a href="{{route('catalog.category', $category->parent()->slug)}}">{{$category->parent()->name}} /</a>
+                                    </li>
                                 @endif
                                 <li>{{$category->name}}</li>
                             </ul>
