@@ -18,6 +18,8 @@ class Category extends Model
         'status',
         'popular',
         'image',
+        'parent',
+        'image',
         'meta_title',
         'meta_descrip',
         'meta_keywords',
@@ -26,5 +28,8 @@ class Category extends Model
     public function author():User
     {
         return User::find($this->created_by);
+    }
+    public function child(){
+        return self::where('parent', $this->id)->get();
     }
 }

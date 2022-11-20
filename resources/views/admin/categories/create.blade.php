@@ -22,11 +22,20 @@
                     <form role="form" action="{{route('admin.categories.store')}}" enctype="multipart/form-data" method="post">
                         @csrf
                         <div class="form-row">
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-4">
                                 <label for="inputEmail4">Название категории</label>
                                 <input type="text" name="name" value="{{old('name')}}" class="form-control" id="name" placeholder="" required>
                             </div>
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-4">
+                                <label for="inputState">Родитель</label>
+                                <select id="inputState" class="form-control" name="parent">
+                                    <option selected="" value="0">Не выбрано</option>
+                                    @foreach($categories as $category)
+                                        <option value="{{ $category->id }}"{{ $category->id==old('parent')?' selected':'' }}>{{ $category->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
                                 <label for="inputPassword4">Символьный код категории</label>
                                 <input type="text" class="form-control" value="{{old('slug')}}" name="slug"  id="slug" placeholder="" required>
                             </div>
