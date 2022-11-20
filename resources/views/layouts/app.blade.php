@@ -52,6 +52,38 @@
     <input type="hidden" id="session_id" name="session_id" value="{{session()->getId()}}"></input>
     <!-- Begin Main Header Area -->
     <header class="main-header-area">
+        <div class="header-top border-bottom d-none d-lg-block">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <div class="header-top-left">
+                            <ul class="dropdown-wrap text-matterhorn">
+                                <li class="dropdown">
+                                    <button class="btn btn-link dropdown-toggle ht-btn" type="button" id="languageButton" data-bs-toggle="dropdown" aria-label="language" aria-expanded="false">
+                                        Język polski
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="languageButton" style="margin: 0px;">
+                                        <li><a class="dropdown-item" href="#">Język angielski</a></li>
+                                        <li><a class="dropdown-item" href="#">Język francuski</a></li>
+                                        <li><a class="dropdown-item" href="#">Język włoski</a></li>
+                                        <li><a class="dropdown-item" href="#">Język hiszpański</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Zadzwoń do nas
+                                    <a href="tel://+48570505860">+48 570 505 860</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="header-top-right text-matterhorn">
+                            <p class="shipping mb-0">Darmowa dostawa przy zamówieniu powyżej <span>200 zl</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="header-middle header-sticky py-6 py-lg-0">
             <div class="container">
                 <div class="row align-items-center">
