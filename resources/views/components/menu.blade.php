@@ -4,7 +4,7 @@
             <a href="{{route('home')}}">Strona główna</a>
         </li>
         <li class="megamenu-holder">
-            <a href="shop.html">Shop
+            <a href="#">Kategorie produktów
                 <i class="pe-7s-angle-down"></i>
             </a>
             <ul class="drop-menu megamenu">
