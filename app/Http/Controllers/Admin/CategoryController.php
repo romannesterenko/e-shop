@@ -31,7 +31,11 @@ class CategoryController extends Controller
             $file->move('assets/uploads/category/', $filename);
             $category->image = $filename;
         }
-
+        if($request->parent>0){
+            $p_cat = Category::find($request->parent);
+            $category->parent = $p_cat->id;
+            $category->depth_level = ++$p_cat->depth_level;
+        }
         $category->name = $request->name;
         $category->slug = $request->slug;
         $category->status = $request->status=='on'?1:0;
@@ -45,7 +49,8 @@ class CategoryController extends Controller
     }
     public function edit($category_id){
         $category = Category::find($category_id);
-        return view('admin.categories.edit', compact('category'));
+        $categories = Category::where('depth_level', 1)->get();
+        return view('admin.categories.edit', compact('category', 'categories'));
     }
     public function delete($category_id){
         $category = Category::find($category_id);
@@ -59,7 +64,8 @@ class CategoryController extends Controller
         return redirect(route('admin.categories.index'))->with('status', 'Категория была успешно удалена');
     }
     public function create(){
-        return view('admin.categories.create');
+        $categories = Category::where('depth_level', 1)->get();
+        return view('admin.categories.create', compact('categories'));
     }
     public function store(Request $request){
         $category = new Category();
@@ -70,7 +76,11 @@ class CategoryController extends Controller
             $file->move('assets/uploads/category/', $filename);
             $category->image = $filename;
         }
-
+        if($request->parent>0){
+            $p_cat = Category::find($request->parent);
+            $category->parent = $p_cat->id;
+            $category->depth_level = ++$p_cat->depth_level;
+        }
         $category->name = $request->name;
         $category->slug = $request->slug;
         $category->status = $request->status=='on'?1:0;

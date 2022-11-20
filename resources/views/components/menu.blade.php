@@ -3,16 +3,28 @@
         <li>
             <a href="{{route('home')}}">Strona główna</a>
         </li>
-        <li class="drop-holder">
-            <a href="#">Kategorie produktów
+        <li class="megamenu-holder">
+            <a href="shop.html">Shop
                 <i class="pe-7s-angle-down"></i>
             </a>
-            <ul class="drop-menu">
+            <ul class="drop-menu megamenu">
                 @foreach($categories as $category)
                     <li>
-                        <a href="/catalog/c/{{$category->slug}}">{{$category->name}}</a>
+                        <span class="title"><a href="{{route('catalog.category', $category->slug)}}">{{$category->name}}</a></span>
+                        <ul>
+                            @foreach($category->child() as $child_category)
+                                <li>
+                                    <a href="{{route('catalog.category', $child_category->slug)}}">{{ $child_category->name }}</a>
+                                </li>
+                            @endforeach
+                        </ul>
                     </li>
                 @endforeach
+                <li>
+                    <div class="banner">
+                        <img src="{{ asset('assets/images/megamenu/banner/1.webp') }}" alt="Menu Banner">
+                    </div>
+                </li>
             </ul>
         </li>
         <li class="drop-holder">

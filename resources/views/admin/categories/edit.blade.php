@@ -18,11 +18,20 @@
                         @csrf
                         @method('PUT')
                         <div class="form-row">
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-4">
                                 <label for="inputEmail4">Название категории</label>
                                 <input type="text" name="name" value="{{$category->name}}" class="form-control" id="inputEmail4" placeholder="" required>
                             </div>
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-4">
+                                <label for="inputState">Родитель</label>
+                                <select id="inputState" class="form-control" name="parent">
+                                    <option selected="" value="0">Не выбрано</option>
+                                    @foreach($categories as $p_category)
+                                        <option value="{{ $p_category->id }}"{{ $p_category->id==$category->parent?' selected':'' }}>{{ $p_category->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
                                 <label for="inputPassword4">Символьный код категории</label>
                                 <input type="text" class="form-control" value="{{$category->slug}}" name="slug"  id="inputPassword4" placeholder="" required>
                             </div>

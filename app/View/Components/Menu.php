@@ -15,7 +15,7 @@ class Menu extends Component
      */
     public function __construct()
     {
-        $this->categories = Category::all();
+        $this->categories = Category::where('depth_level', 1)->get();
     }
 
     /**
