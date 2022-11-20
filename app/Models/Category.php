@@ -32,4 +32,9 @@ class Category extends Model
     public function child(){
         return self::where('parent', $this->id)->get();
     }
+
+    public function parent()
+    {
+        return self::find($this->parent);
+    }
 }

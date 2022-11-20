@@ -13,6 +13,9 @@
                                 <li>
                                     <a href="{{route('home')}}"> Strona główna /</a>
                                 </li>
+                                @if($category->parent())
+                                    <a href="{{route('catalog.category', $category->parent()->slug)}}">{{$category->parent()->name}} /</a>
+                                @endif
                                 <li>{{$category->name}}</li>
                             </ul>
                         </div>
@@ -33,6 +36,21 @@
                                     </button>
                                 </form>
                             </div>
+                            @if($category->child()->count()>0)
+
+                            <div class="widgets-area mb-9">
+                                <h2 class="widgets-title mb-5">Kategorie produktów</h2>
+                                <div class="widgets-item">
+                                    <ul class="widgets-category">
+                                        @foreach($category->child() as $c_cat)
+                                        <li>
+                                            <a href="{{ route('catalog.category', $c_cat->slug) }}">{{ $c_cat->name }}</a>
+                                        </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+                            @endif
                             <div class="widgets-area widgets-filter mb-9">
                                 <h2 class="widgets-title mb-5">Filtr cen</h2>
                                 <div class="price-filter">
