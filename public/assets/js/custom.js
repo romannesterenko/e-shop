@@ -50,6 +50,18 @@ $(function (){
             }
         });
     })
+    /*$(document).on('click', '#logout_button', function (e){
+        e.preventDefault()
+        $.ajax({
+            method: 'POST',
+            url: "/logout",
+            data: {},
+            dataType: 'json',
+            success: function (response){
+                location.reload();
+            }
+        });
+    })*/
     $(document).on('click', '.deleteFromCart', function (e){
         e.preventDefault()
         var item_id = $(this).data('item-id');

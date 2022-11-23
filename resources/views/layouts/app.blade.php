@@ -109,7 +109,12 @@
                                                 @if(Auth::user()->role_as==1)
                                                     <li><a class="dropdown-item" href="{{route('admin.home')}}">Panel administracyjny</a></li>
                                                 @endif
-                                                <li><a class="dropdown-item" href="/logout">Wyloguj</a></li>
+                                                <li>
+                                                    <form action="{{route('logout')}}" method="post">
+                                                        @csrf
+                                                        <button type="submit" class="dropdown-item" value="Wyloguj" style="font-size: 14px;">Wyloguj</button>
+                                                    </form>
+                                                </li>
                                             </ul>
                                         @else
                                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingButton">
