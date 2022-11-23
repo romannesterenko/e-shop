@@ -29,8 +29,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/ion.rangeSlider.min.css') }}" />
 
     <!-- Minify Version -->
-    <!-- <link rel="stylesheet" {{ asset('href="assets') }}/css/vendor/vendor.min.css"> -->
-    <!-- <link rel="stylesheet" {{ asset('href="assets') }}/css/plugins/plugins.min.css"> -->
+    <!-- <link rel="stylesheet" {{ asset('href="assets/css/vendor/vendor.min.css') }}"> -->
+    <!-- <link rel="stylesheet" {{ asset('href="assets/css/plugins/plugins.min.css') }}"> -->
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
