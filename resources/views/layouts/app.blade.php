@@ -21,16 +21,16 @@
     <link rel="stylesheet" href="{{asset('assets/css/vendor/Pe-icon-7-stroke.css')}}" />
 
     <!-- Plugin CSS (Global Plugins Files) -->
-    <link rel="stylesheet" href="{{asset('assets/css/plugins/animate.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/plugins/jquery-ui.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/plugins/swiper-bundle.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/plugins/nice-select.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/plugins/magnific-popup.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('assets/css/plugins/ion.rangeSlider.min.css')}}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/jquery-ui.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/magnific-popup.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/plugins/ion.rangeSlider.min.css') }}" />
 
     <!-- Minify Version -->
-    <!-- <link rel="stylesheet" {{asset('href="assets')}}/css/vendor/vendor.min.css"> -->
-    <!-- <link rel="stylesheet" {{asset('href="assets')}}/css/plugins/plugins.min.css"> -->
+    <!-- <link rel="stylesheet" {{ asset('href="assets') }}/css/vendor/vendor.min.css"> -->
+    <!-- <link rel="stylesheet" {{ asset('href="assets') }}/css/plugins/plugins.min.css"> -->
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
